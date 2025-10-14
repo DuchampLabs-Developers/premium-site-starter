@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulation Services — Premium Starter</title>
+  <meta name="description" content="Clean, premium starter template for a formulation services brand." />
+  <!-- Tailwind Play CDN (fine for prototypes; switch to build pipeline later) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5f9ff',
+              100: '#eaf2ff',
+              600: '#2457ff',
+              700: '#1a46d9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body class="font-sans text-slate-800 bg-white selection:bg-brand-100 selection:text-slate-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-white/70 backdrop-blur border-b border-slate-100">
+    <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-brand-600 text-white font-semibold">FS</span>
+        <span class="text-lg font-semibold tracking-tight">Formulation Studio</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="hover:text-brand-700 transition">Services</a>
+        <a href="#process" class="hover:text-brand-700 transition">Process</a>
+        <a href="#work" class="hover:text-brand-700 transition">Work</a>
+        <a href="#about" class="hover:text-brand-700 transition">About</a>
+        <a href="#contact" class="ml-2 inline-flex items-center rounded-md bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700 transition">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50 via-white to-white"></div>
+    <div class="mx-auto max-w-7xl px-6 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.05] tracking-tight text-slate-900">Premium <span class="text-brand-700">Formulation</span> for Food & Beverage Brands</h1>
+        <p class="mt-5 text-lg text-slate-600 max-w-prose">We design market‑ready formulas, validate stability, and scale production with co‑packers. Clean labels, bold flavor, regulatory ready.</p>
+        <div class="mt-8 flex items-center gap-4">
+          <a href="#contact" class="inline-flex items-center rounded-md bg-brand-600 px-5 py-3 text-white font-semibold hover:bg-brand-700 transition">Start a project</a>
+          <a href="#work" class="inline-flex items-center rounded-md border border-slate-200 px-5 py-3 font-semibold hover:bg-slate-50 transition">See case studies</a>
+        </div>
+        <div class="mt-8 flex items-center gap-6 opacity-80">
+          <img src="https://dummyimage.com/100x36/ffffff/aaa&text=Client+Logo" alt="" class="h-9">
+          <img src="https://dummyimage.com/100x36/ffffff/aaa&text=Client+Logo" alt="" class="h-9">
+          <img src="https://dummyimage.com/100x36/ffffff/aaa&text=Client+Logo" alt="" class="h-9">
+        </div>
+      </div>
+      <div class="relative reveal">
+        <div class="absolute -inset-6 -z-10 bg-gradient-to-tr from-brand-50 to-transparent rounded-3xl"></div>
+        <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-200">
+          <img src="https://images.unsplash.com/photo-1547514701-42782101795b?q=80&w=1200&auto=format&fit=crop" alt="Beverage formulation lab" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="mx-auto max-w-7xl px-6 py-20">
+    <div class="reveal">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Services</h2>
+      <p class="mt-3 text-slate-600 max-w-prose">From concept to commercialization. Choose a package or request a custom scope.</p>
+    </div>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <div class="card">
+        <h3 class="text-xl font-semibold">Formula Development</h3>
+        <p class="mt-2 text-slate-600">Concepting, ingredient sourcing, benchtop trials, sensory refinement.</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
+          <li>Clean label focus</li>
+          <li>Functional actives &amp; flavors</li>
+          <li>Shelf-life guidance</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold">Regulatory &amp; QA</h3>
+        <p class="mt-2 text-slate-600">Label review, nutrition facts, claims guidance, compliance checks.</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
+          <li>Nutrition panel &amp; allergens</li>
+          <li>Claims substantiation</li>
+          <li>Documentation pack</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold">Scale-Up &amp; Ops</h3>
+        <p class="mt-2 text-slate-600">Pilot, co‑packer sourcing, trials, and launch support.</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
+          <li>Co‑man matchmaking</li>
+          <li>Pilot to production</li>
+          <li>Launch playbook</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="mx-auto max-w-7xl px-6 py-20 bg-slate-50 rounded-3xl">
+    <div class="reveal">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Process</h2>
+      <p class="mt-3 text-slate-600 max-w-prose">A simple, transparent four‑step journey to market.</p>
+    </div>
+    <div class="mt-10 grid md:grid-cols-4 gap-6">
+      <div class="step"><span>1</span><h3>Discover</h3><p>Goals, timeline, constraints. Competitive taste mapping.</p></div>
+      <div class="step"><span>2</span><h3>Design</h3><p>Ingredient selection, benchtop trials, iterations.</p></div>
+      <div class="step"><span>3</span><h3>Validate</h3><p>Stability guidance, nutrition facts, claims review.</p></div>
+      <div class="step"><span>4</span><h3>Scale</h3><p>Co‑packer sourcing, pilot, commercialization support.</p></div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="mx-auto max-w-7xl px-6 py-20">
+    <div class="reveal">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Selected Work</h2>
+      <p class="mt-3 text-slate-600">Replace these with real case studies later.</p>
+    </div>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <article class="work">
+        <img src="https://images.unsplash.com/photo-1555952517-2e8e729e0b44?q=80&w=1200&auto=format&fit=crop" alt="" class="thumb">
+        <h3>Functional Soda Platform</h3>
+        <p>Prebiotic, low sugar, citrus-forward.</p>
+      </article>
+      <article class="work">
+        <img src="https://images.unsplash.com/photo-1556125574-d7f27ec36a06?q=80&w=1200&auto=format&fit=crop" alt="" class="thumb">
+        <h3>RTD Coffee Elixir</h3>
+        <p>Adaptogens, clean label, shelf-stable.</p>
+      </article>
+      <article class="work">
+        <img src="https://images.unsplash.com/photo-1532635223-4e0cd70bff21?q=80&w=1200&auto=format&fit=crop" alt="" class="thumb">
+        <h3>Botanical Aperitif</h3>
+        <p>Orange-rhubarb profile with gentle bitterness.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="mx-auto max-w-7xl px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">About</h2>
+        <p class="mt-4 text-slate-600">We’re a formulation studio focused on flavor, function, and feasibility. From napkin sketch to national rollout.</p>
+        <ul class="mt-6 grid grid-cols-2 gap-4 text-sm text-slate-700">
+          <li>• Beverage & RTD</li>
+          <li>• Spirits & Aperitifs</li>
+          <li>• Functional Ingredients</li>
+          <li>• CPG Launch Support</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="aspect-video rounded-2xl overflow-hidden ring-1 ring-slate-200 shadow-lg">
+          <img src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?q=80&w=1200&auto=format&fit=crop" alt="" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-3xl px-6 py-20">
+    <div class="reveal text-center">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Start Your Project</h2>
+      <p class="mt-3 text-slate-600">Tell us about your product vision. We’ll reply within 1–2 business days.</p>
+    </div>
+    <form class="mt-10 grid gap-4 reveal" onsubmit="event.preventDefault(); alert('Demo form — hook this up later with Resend/SendGrid.');">
+      <div class="grid md:grid-cols-2 gap-4">
+        <label class="block">
+          <span class="text-sm font-medium">Name</span>
+          <input type="text" required class="mt-1 input" placeholder="Your full name">
+        </label>
+        <label class="block">
+          <span class="text-sm font-medium">Email</span>
+          <input type="email" required class="mt-1 input" placeholder="you@brand.com">
+        </label>
+      </div>
+      <label class="block">
+        <span class="text-sm font-medium">What are you building?</span>
+        <textarea rows="5" class="mt-1 input" placeholder="Briefly describe your product and timeline"></textarea>
+      </label>
+      <button class="mt-4 inline-flex items-center justify-center rounded-md bg-brand-600 px-5 py-3 text-white font-semibold hover:bg-brand-700 transition">Request Quote</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-100">
+    <div class="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="yr"></span> Formulation Studio. All rights reserved.</p>
+      <nav class="flex items-center gap-6">
+        <a href="#" class="hover:text-slate-700">Privacy</a>
+        <a href="#" class="hover:text-slate-700">Terms</a>
+        <a href="#contact" class="hover:text-slate-700">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>
