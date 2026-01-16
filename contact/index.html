@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulation Services — Premium Starter</title>
+  <meta name="description" content="Clean, premium starter template for a formulation services brand." />
+  <!-- Tailwind Play CDN (fine for prototypes; switch to build pipeline later) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5f9ff',
+              100: '#eaf2ff',
+              600: '#2457ff',
+              700: '#1a46d9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body class="font-sans text-slate-800 bg-white selection:bg-brand-100 selection:text-slate-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-white/70 backdrop-blur border-b border-slate-100">
+    <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <span
+          class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-brand-600 text-white font-semibold">DC</span>
+        <span class="text-lg font-semibold tracking-tight">DuchampLABS</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="hover:text-brand-700 transition">Services</a>
+        <a href="#process" class="hover:text-brand-700 transition">Process</a>
+        <a href="#work" class="hover:text-brand-700 transition">Work</a>
+        <a href="#about" class="hover:text-brand-700 transition">About</a>
+        <a href="/contact"
+          class="ml-2 inline-flex items-center rounded-md bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700 transition">Get
+          a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-50 py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <!-- Section Heading -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900">
+          Start Your Project
+        </h2>
+        <p class="mt-4 text-lg text-gray-600">
+          Tell us about your product vision.
+        </p>
+      </div>
+
+      <!-- Form Card -->
+      <div class="bg-white shadow-sm rounded-xl p-8 md:p-12">
+        <form id="contactForm" class="grid gap-6" novalidate>
+
+          <!-- First Row: First Name & Last Name -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-gray-700 font-medium mb-1" for="first-name">First Name <span
+                  class="text-red-500">*</span></label>
+              <input type="text" id="first-name" placeholder="John"
+                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
+              <p class="text-red-500 text-sm mt-1 hidden" id="first-name-error">First Name is required.</p>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 font-medium mb-1" for="last-name">Last Name <span
+                  class="text-red-500">*</span></label>
+              <input type="text" id="last-name" placeholder="Doe"
+                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
+              <p class="text-red-500 text-sm mt-1 hidden" id="last-name-error">Last Name is required.</p>
+            </div>
+          </div>
+
+          <!-- Second Row: Email & Phone -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-gray-700 font-medium mb-1" for="email">Email <span
+                  class="text-red-500">*</span></label>
+              <input type="email" id="email" placeholder="you@brand.com"
+                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
+              <p class="text-red-500 text-sm mt-1 hidden" id="email-error">Email is required.</p>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 font-medium mb-1" for="phone">Phone <span
+                  class="text-red-500">*</span></label>
+              <input type="tel" id="phone" placeholder="+1 555 123 4567"
+                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
+              <p class="text-red-500 text-sm mt-1 hidden" id="phone-error">Phone is required.</p>
+            </div>
+          </div>
+
+          <!-- Third Row: Company (optional) -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-gray-700 font-medium mb-1" for="company">Company</label>
+              <input type="text" id="company" placeholder="Brand or Company Name"
+                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
+            </div>
+          </div>
+
+          <!-- Fourth Row: What are you building? (required) -->
+          <div>
+            <label class="block text-gray-700 font-medium mb-1" for="project">
+              Message <span class="text-red-500">*</span>
+            </label>
+            <textarea id="project" rows="5"
+              placeholder="Please share your product vision, goals, and any important details so we can best assist you."
+              class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition"></textarea>
+            <p class="text-red-500 text-sm mt-1 hidden" id="project-error">Project details are required.</p>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex justify-center">
+            <button type="submit"
+              class="bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
+              Submit
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-100">
+    <div
+      class="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="yr"></span> Formulation Studio. All rights reserved.</p>
+      <nav class="flex items-center gap-6">
+        <a href="#" class="hover:text-slate-700">Privacy</a>
+        <a href="#" class="hover:text-slate-700">Terms</a>
+        <a href="#contact" class="hover:text-slate-700">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+</body>
+
+</html>
+<!-- Validation Script -->
+<script>
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Required fields
+    const requiredFields = [
+      { id: 'first-name', errorId: 'first-name-error' },
+      { id: 'last-name', errorId: 'last-name-error' },
+      { id: 'email', errorId: 'email-error' },
+      { id: 'phone', errorId: 'phone-error' },
+      { id: 'project', errorId: 'project-error' } // required now
+    ];
+
+    let isValid = true;
+
+    requiredFields.forEach(field => {
+      const input = document.getElementById(field.id);
+      const error = document.getElementById(field.errorId);
+
+      if (!input.value.trim()) {
+        error.classList.remove('hidden');
+        isValid = false;
+      } else {
+        error.classList.add('hidden');
+      }
+    });
+
+    if (isValid) {
+      alert('Form submitted successfully!'); // replace with backend
+      form.reset();
+    }
+  });
+</script>
