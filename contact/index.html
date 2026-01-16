@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="/premium_site_starter/assets/style.css">
 </head>
 
 <body class="font-sans text-slate-800 bg-white selection:bg-brand-100 selection:text-slate-900">
@@ -44,10 +44,10 @@
         <span class="text-lg font-semibold tracking-tight">DuchampLABS</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#services" class="hover:text-brand-700 transition">Services</a>
-        <a href="#process" class="hover:text-brand-700 transition">Process</a>
-        <a href="#work" class="hover:text-brand-700 transition">Work</a>
-        <a href="#about" class="hover:text-brand-700 transition">About</a>
+        <a href="/#services" class="hover:text-brand-700 transition">Services</a>
+        <a href="/#process" class="hover:text-brand-700 transition">Process</a>
+        <a href="/#work" class="hover:text-brand-700 transition">Work</a>
+        <a href="/about" class="hover:text-brand-700 transition">About</a>
         <a href="/contact"
           class="ml-2 inline-flex items-center rounded-md bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700 transition">Get
           a Quote</a>
@@ -56,7 +56,7 @@
   </header>
 
   <!-- Contact -->
-  <section id="contact" class="bg-gray-50 py-24 px-6">
+  <section id="contact" class="bg-gradient-to-b from-brand-100 via-brand-50 to-brand-100 py-24 px-6">
     <div class="max-w-5xl mx-auto">
       <!-- Section Heading -->
       <div class="text-center mb-12">
@@ -156,43 +156,8 @@
     </div>
   </footer>
 
-  <script src="./assets/script.js"></script>
+  <script src="/premium_site_starter/assets/script.js"></script>
+  <script src="/premium_site_starter/assets/form_validation.js"></script>
 </body>
 
 </html>
-<!-- Validation Script -->
-<script>
-  const form = document.getElementById('contactForm');
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    // Required fields
-    const requiredFields = [
-      { id: 'first-name', errorId: 'first-name-error' },
-      { id: 'last-name', errorId: 'last-name-error' },
-      { id: 'email', errorId: 'email-error' },
-      { id: 'phone', errorId: 'phone-error' },
-      { id: 'project', errorId: 'project-error' } // required now
-    ];
-
-    let isValid = true;
-
-    requiredFields.forEach(field => {
-      const input = document.getElementById(field.id);
-      const error = document.getElementById(field.errorId);
-
-      if (!input.value.trim()) {
-        error.classList.remove('hidden');
-        isValid = false;
-      } else {
-        error.classList.add('hidden');
-      }
-    });
-
-    if (isValid) {
-      alert('Form submitted successfully!'); // replace with backend
-      form.reset();
-    }
-  });
-</script>
