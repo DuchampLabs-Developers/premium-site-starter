@@ -8,6 +8,7 @@
   <meta name="description" content="Clean, premium starter template for a formulation services brand." />
   <!-- Tailwind Play CDN (fine for prototypes; switch to build pipeline later) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -31,6 +32,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="/premium_site_starter/assets/style.css">
 </head>
 
@@ -72,24 +74,28 @@
             class="hidden inline-flex items-center rounded-md border border-slate-200 px-5 py-3 font-semibold hover:bg-slate-50 transition">See
             case studies</a>
         </div>
-        <div class="hidden mt-8 flex items-center gap-6 opacity-80">
-          <img src="/premium_site_starter/assets/logo1.png" alt="client logo1" class="h-9">
-          <img src="/premium_site_starter/assets/logo2.png" alt="client logo2" class="h-9">
-          <img src="/premium_site_starter/assets/logo3.png" alt="client logo3" class="h-9">
+        <div class="mt-8 flex items-center gap-6 opacity-80">
+          <img src="/premium_site_starter/assets/logo/Barley Tea_BTC Tag Color.png" alt="client logo1" class="h-32">
+          <img src="/premium_site_starter/assets/logo2.png" alt="client logo2" class="hidden h-9">
+          <img src="/premium_site_starter/assets/logo3.png" alt="client logo3" class="hidden h-9">
         </div>
       </div>
-      <div class="relative reveal">
-        <div class="absolute -inset-6 -z-10 rounded-3xl"></div>
-        <img src="/premium_site_starter/assets/images/kobucha.png" alt="Beverage formulation lab"
-          class="w-full h-full object-cover">
+      <div class="relative reveal max-w-md mx-auto lg:max-w-lg">
+        <div
+          class="absolute -inset-4 bg-gradient-to-br from-amber-50 via-blue-100 to-brand-100 rounded-[3rem] blur-3xl -z-10">
+        </div>
+        <img src="/premium_site_starter/assets/images/hero-removebg-preview.png" alt="Beverage formulation lab"
+          class="relative w-full h-64 sm:h-80 md:h-96 lg:h-[40rem] object-cover rounded-[2rem]">
       </div>
+    </div>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="mx-auto max-w-7xl px-6 py-10 md:py-12">
+  <section id="services"
+    class="mx-auto max-w-7xl px-6 py-10 bg-gradient-to-b from-brand-100 via-white to-brand-50 md:py-12">
     <!-- Header -->
-    <div class="text-center mb-12">
+    <div class="text-center mb-12 reveal">
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Services</h2>
       <p class="mt-3 text-slate-600 max-w-prose mx-auto">
         From concept to commercialization. Choose a package or request a custom scope.
@@ -97,15 +103,17 @@
     </div>
 
     <!-- Services Grid: single row on desktop -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
 
       <!-- Card 1 -->
       <div class="p-6 bg-white rounded-2xl border border-gray-200 hover:shadow-lg transition">
-        <div class="flex items-center mb-4">
-          <svg class="w-8 h-8 text-slate-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7 12l2 2 4-4" />
-          </svg>
-          <h3 class="text-xl font-semibold">Formula Development</h3>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+            <i class="fa-solid fa-flask"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Formula Development
+          </h3>
         </div>
         <p class="mt-2 text-slate-600">
           Concepting, ingredient sourcing, benchtop trials, sensory refinement.
@@ -119,12 +127,15 @@
 
       <!-- Card 2 -->
       <div class="p-6 bg-white rounded-2xl border border-gray-200 hover:shadow-lg transition">
-        <div class="flex items-center mb-4">
-          <svg class="w-8 h-8 text-slate-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-          <h3 class="text-xl font-semibold">Regulatory & QA</h3>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Regulatory & QA
+          </h3>
         </div>
+
         <p class="mt-2 text-slate-600">
           Label review, nutrition facts, claims guidance, compliance checks.
         </p>
@@ -137,12 +148,15 @@
 
       <!-- Card 3 -->
       <div class="p-6 bg-white rounded-2xl border border-gray-200 hover:shadow-lg transition">
-        <div class="flex items-center mb-4">
-          <svg class="w-8 h-8 text-slate-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
-          </svg>
-          <h3 class="text-xl font-semibold">Scale-Up & Ops</h3>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+            <i class="fa-solid fa-industry"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">
+            Scale-Up & Ops
+          </h3>
         </div>
+
         <p class="mt-2 text-slate-600">
           Pilot, co‑packer sourcing, trials, and launch support.
         </p>
@@ -157,7 +171,8 @@
   </section>
 
   <!-- Process -->
-  <section id="process" class="relative overflow-hidden bg-slate-100 rounded-3xl py-16 px-6">
+  <section id="process"
+    class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-brand-100 rounded-3xl py-16 px-6">
     <div class="text-center mb-12 reveal">
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Product Development</h2>
       <p class="mt-3 text-slate-600 max-w-prose mx-auto">
@@ -166,7 +181,7 @@
     </div>
 
     <!-- Steps Grid -->
-    <div class="relative max-w-7xl mx-auto">
+    <div class="relative max-w-7xl mx-auto reveal">
       <div class="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
         <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="875" height="48" viewBox="0 0 875 48" fill="none">
           <path
@@ -183,7 +198,10 @@
             <span class="text-xl font-semibold text-blue-600">1</span>
           </div>
           <h3 class="mt-4 text-xl font-semibold text-gray-900">Discover</h3>
-          <p class="mt-2 text-sm text-gray-600">Goals, timeline, constraints. Competitive taste mapping.</p>
+          <ul class="mt-2 text-sm text-gray-600 list-disc list-inside">
+            <li>Goals, timeline, constraints.</li>
+            <li>Competitive taste mapping.</li>
+          </ul>
         </div>
 
         <!-- Step 2 -->
@@ -193,7 +211,11 @@
             <span class="text-xl font-semibold text-blue-600">2</span>
           </div>
           <h3 class="mt-4 text-xl font-semibold text-gray-900">Design</h3>
-          <p class="mt-2 text-sm text-gray-600">Ingredient selection, benchtop trials, iterations.</p>
+          <ul class="mt-2 text-sm text-gray-600 list-disc list-inside text-left">
+            <li>Ingredient selection.</li>
+            <li>Benchtop trials.</li>
+            <li>Iterations.</li>
+          </ul>
         </div>
 
         <!-- Step 3 -->
@@ -203,7 +225,12 @@
             <span class="text-xl font-semibold text-blue-600">3</span>
           </div>
           <h3 class="mt-4 text-xl font-semibold text-gray-900">Validate</h3>
-          <p class="mt-2 text-sm text-gray-600">Stability guidance, nutrition facts, claims review.</p>
+
+          <ul class="mt-2 text-sm text-gray-600 list-disc list-inside text-left">
+            <li>Stability guidance.</li>
+            <li>Nutrition facts.</li>
+            <li>Claims review.</li>
+          </ul>
         </div>
 
         <!-- Step 4 -->
@@ -213,13 +240,18 @@
             <span class="text-xl font-semibold text-blue-600">4</span>
           </div>
           <h3 class="mt-4 text-xl font-semibold text-gray-900">Scale</h3>
-          <p class="mt-2 text-sm text-gray-600">Co‑packer sourcing, pilot, commercialization support.</p>
+          <ul class="mt-2 text-sm text-gray-600 list-disc list-inside text-left">
+            <li>Co-packer sourcing.</li>
+            <li>Pilot trials.</li>
+            <li>Launch support.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="work" class="mx-auto max-w-7xl px-6 py-10 md:py-12">
+  <section id="work"
+    class="mx-auto max-w-7xl px-6 py-10 bg-gradient-to-b from-brand-100 via-white to-brand-50 md:py-12">
     <!-- Header -->
     <div class="text-center mb-16 reveal">
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">Selected Work</h2>
@@ -229,14 +261,13 @@
     </div>
 
     <!-- Projects Grid -->
-    <div class="mt-10 grid md:grid-cols-3 gap-8">
+    <div class="mt-10 grid md:grid-cols-3 gap-8 reveal">
 
       <!-- Project 1 -->
       <article
         class="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition-shadow">
         <div class="relative overflow-hidden">
-          <img src="/premium_site_starter/assets/images/tepache.jpg"
-            alt="Functional Soda Platform"
+          <img src="/premium_site_starter/assets/images/tepache.jpg" alt="Functional Soda Platform"
             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
           <div
             class="absolute inset-0 bg-blue-600/40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
@@ -281,8 +312,7 @@
       <article
         class="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition-shadow">
         <div class="relative overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1532635223-4e0cd70bff21?q=80&w=1200&auto=format&fit=crop"
-            alt="Botanical Aperitif"
+          <img src="/premium_site_starter/assets/images/aperitifs.jpg" alt="Botanical Aperitif"
             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
           <div
             class="absolute inset-0 bg-blue-600/40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
@@ -294,7 +324,8 @@
           </h3>
           <div class="flex flex-wrap gap-2">
             <span class="text-xs font-medium px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Botanical</span>
-            <span class="text-xs font-medium px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Orange-rhubarb profile with gentle bitterness.</span>
+            <span class="text-xs font-medium px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Orange-rhubarb profile
+              with gentle bitterness.</span>
           </div>
         </div>
       </article>
@@ -316,6 +347,7 @@
   </footer>
 
   <script src="/premium_site_starter/assets/script.js"></script>
+  <script src="/premium_site_starter/assets/section_motion.js"></script>
 </body>
 
 </html>
