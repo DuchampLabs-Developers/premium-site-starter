@@ -1,10 +1,8 @@
-
 const form = document.getElementById('contactForm');
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
-    // Required fields
     const requiredFields = [
         { id: 'first-name', errorId: 'first-name-error' },
         { id: 'last-name', errorId: 'last-name-error' },
@@ -27,8 +25,32 @@ form.addEventListener('submit', function (event) {
         }
     });
 
-    if (isValid) {
-        alert('Will be submitted, after connecting with backend'); // replace with backend
-        form.reset();
+    if (!isValid) return;
+
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch("https://formspree.io/f/mykkeodw", {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        const result = await response.json(); 
+        console.log(result);
+
+        if (response.ok) {
+            alert("Thanks for choosing us, we will get back to you soon!");
+            form.reset();
+        } else {
+            alert(result.error || "Something went wrong. Please try again.");
+        }
+
+    } catch (error) {
+        console.error(error);
+        alert("Network error. Please try later.");
     }
+
 });
