@@ -1,4 +1,5 @@
 const form = document.getElementById('contactForm');
+const submitBtn = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', async function (event) {
     event.preventDefault();
@@ -27,7 +28,14 @@ form.addEventListener('submit', async function (event) {
 
     if (!isValid) return;
 
+    // Disable button while submitting
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Sending...";
+
     const formData = new FormData(form);
+
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
 
     try {
         const response = await fetch("https://formspree.io/f/mykkeodw", {
@@ -38,19 +46,29 @@ form.addEventListener('submit', async function (event) {
             }
         });
 
-        const result = await response.json(); 
-        console.log(result);
+        const successModal = document.getElementById('successModal');
+        const closeModal = document.getElementById('closeModal');
 
         if (response.ok) {
-            alert("Thanks for choosing us, we will get back to you soon!");
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
             form.reset();
         } else {
-            alert(result.error || "Something went wrong. Please try again.");
+            errorMsg.classList.remove('hidden');
         }
 
-    } catch (error) {
-        console.error(error);
-        alert("Network error. Please try later.");
-    }
 
+    } catch (error) {
+        errorMsg.classList.remove('hidden');
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send Message";
+    }
+});
+
+//close modal after form submission
+closeModal.addEventListener('click', () => {
+    successModal.classList.add('hidden');
+    successModal.classList.remove('flex');
+    window.location.reload();
 });

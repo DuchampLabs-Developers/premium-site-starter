@@ -73,73 +73,91 @@
       <!-- Form Card -->
       <div class="bg-white shadow-sm rounded-xl p-8 md:p-12 reveal">
         <form id="contactForm" class="grid gap-6" novalidate>
-            <!-- First Row: First Name & Last Name -->
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-gray-700 font-medium mb-1" for="first-name">First Name <span
-                    class="text-red-500">*</span></label>
-                <input type="text" id="first-name" name="first-name" placeholder="John"
-                  class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
-                <p class="text-red-500 text-sm mt-1 hidden" id="first-name-error">First Name is required.</p>
-              </div>
+          <input type="text" name="_gotcha" style="display:none">
 
-              <div>
-                <label class="block text-gray-700 font-medium mb-1" for="last-name">Last Name <span
-                    class="text-red-500">*</span></label>
-                <input type="text" id="last-name" name="last-name" placeholder="Doe"
-                  class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
-                <p class="text-red-500 text-sm mt-1 hidden" id="last-name-error">Last Name is required.</p>
-              </div>
-            </div>
-
-            <!-- Second Row: Email & Phone -->
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-gray-700 font-medium mb-1" for="email">Email <span
-                    class="text-red-500">*</span></label>
-                <input type="email" id="email" name="email" placeholder="you@brand.com"
-                  class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
-                <p class="text-red-500 text-sm mt-1 hidden" id="email-error">Email is required.</p>
-              </div>
-
-              <div>
-                <label class="block text-gray-700 font-medium mb-1" for="phone">Phone <span
-                    class="text-red-500">*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567"
-                  class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
-                <p class="text-red-500 text-sm mt-1 hidden" id="phone-error">Phone is required.</p>
-              </div>
-            </div>
-
-            <!-- Third Row: Company (optional) -->
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-gray-700 font-medium mb-1" for="company">Company</label>
-                <input type="text" id="company" name="company" placeholder="Brand or Company Name"
-                  class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
-              </div>
-            </div>
-
-            <!-- Fourth Row: What are you building? (required) -->
+          <!-- First Row: First Name & Last Name -->
+          <div class="grid md:grid-cols-2 gap-6">
             <div>
-              <label class="block text-gray-700 font-medium mb-1" for="project">
-                Message <span class="text-red-500">*</span>
-              </label>
-              <textarea id="project" name="project" rows="5"
-                placeholder="Please share your product vision, goals, and any important details so we can best assist you."
-                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition"></textarea>
-              <p class="text-red-500 text-sm mt-1 hidden" id="project-error">Project details are required.</p>
+              <label class="block text-gray-700 font-medium mb-1" for="first-name">First Name <span
+                  class="text-red-500">*</span></label>
+              <input type="text" id="first-name" name="first-name" placeholder="John"
+                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
+              <p class="text-red-500 text-sm mt-1 hidden" id="first-name-error">First Name is required.</p>
             </div>
 
-            <!-- Submit Button -->
-            <div class="flex justify-center">
-              <button type="submit"
-                class="bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
-                Submit
+            <div>
+              <label class="block text-gray-700 font-medium mb-1" for="last-name">Last Name <span
+                  class="text-red-500">*</span></label>
+              <input type="text" id="last-name" name="last-name" placeholder="Doe"
+                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
+              <p class="text-red-500 text-sm mt-1 hidden" id="last-name-error">Last Name is required.</p>
+            </div>
+          </div>
+
+          <!-- Second Row: Email & Phone -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-gray-700 font-medium mb-1" for="email">Email <span
+                  class="text-red-500">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@brand.com"
+                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
+              <p class="text-red-500 text-sm mt-1 hidden" id="email-error">Email is required.</p>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 font-medium mb-1" for="phone">Phone <span
+                  class="text-red-500">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567"
+                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
+              <p class="text-red-500 text-sm mt-1 hidden" id="phone-error">Phone is required.</p>
+            </div>
+          </div>
+
+          <!-- Third Row: Company (optional) -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-gray-700 font-medium mb-1" for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Brand or Company Name"
+                class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition" />
+            </div>
+          </div>
+
+          <!-- Fourth Row: What are you building? (required) -->
+          <div>
+            <label class="block text-gray-700 font-medium mb-1" for="project">
+              Message <span class="text-red-500">*</span>
+            </label>
+            <textarea id="project" name="project" rows="5"
+              placeholder="Please share your product vision, goals, and any important details so we can best assist you."
+              class="w-full rounded-lg border border-gray-300 bg-gray-100 py-3 px-4 text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition"></textarea>
+            <p class="text-red-500 text-sm mt-1 hidden" id="project-error">Project details are required.</p>
+          </div>
+          
+          <!-- Submit Button -->
+          <div class="flex justify-center">
+            <button type="submit"
+              class="bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
+              Submit
+            </button>
+          </div>
+          <div id="successModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50">
+            <div class="bg-white rounded-xl p-6 max-w-sm w-full text-center shadow-lg">
+              <h2 class="text-xl font-semibold text-brand-600 mb-2">
+                Message Sent ✅
+              </h2>
+              <p class="text-gray-700 mb-4">
+                Thank you for choosing us! We’ve received your message and will get back to you via email.
+              </p>
+              <button id="closeModal"
+                class="px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition">
+                Close
               </button>
             </div>
-
-          </form>
+          </div>
+          <p id="form-error" class="hidden text-red-600 text-center mt-4">
+            Something went wrong. Your message was not sent. Please try submitting the form again after some time.
+          </p>
+        </form>
       </div>
     </div>
   </section>
