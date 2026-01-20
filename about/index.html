@@ -37,13 +37,16 @@
 
 <body class="font-sans text-slate-800 bg-white selection:bg-brand-100 selection:text-slate-900">
     <!-- Header -->
-    <header class="sticky top-0 z-30 bg-white/70 backdrop-blur border-b border-slate-100">
+    <header id="header" class="sticky top-0 z-30 bg-white/70 border-b border-slate-100">
         <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
             <a href="/" class="flex items-center gap-2">
                 <span
                     class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-brand-600 text-white font-semibold">DC</span>
                 <span class="text-lg font-semibold tracking-tight">DuchampLABS</span>
             </a>
+
+            <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center gap-6 text-sm">
                 <a href="/#services" class="hover:text-brand-700 transition">Services</a>
                 <a href="/#process" class="hover:text-brand-700 transition">Process</a>
@@ -53,6 +56,34 @@
                     class="ml-2 inline-flex items-center rounded-md bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700 transition">Get
                     a Quote</a>
             </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="hamburger"
+                class="md:hidden flex items-center justify-center w-10 h-10 rounded-md text-brand-600 hover:bg-gray-200 transition">
+                <svg id="hamburger-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="hamburger-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Modal (below header, header unaffected) -->
+        <div id="mobileMenuBackdrop" class="fixed inset-0 z-40 hidden pt-[72px]">
+            <!-- pt-[72px] pushes menu below header height -->
+            <div id="mobileMenu"
+                class="flex flex-col items-center justify-start space-y-6 bg-brand-100 text-xl transform scale-95 opacity-0 transition-all duration-300 py-6">
+                <a href="/#services" class="hover:text-brand-700 transition">Services</a>
+                <a href="/#process" class="hover:text-brand-700 transition">Process</a>
+                <a href="/#work" class="hover:text-brand-700 transition">Work</a>
+                <a href="/about" class="hover:text-brand-700 transition">About</a>
+                <a href="/contact"
+                    class="inline-flex items-center rounded-md bg-brand-600 px-6 py-3 text-white font-medium hover:bg-brand-700 transition">Get
+                    a Quote</a>
+            </div>
         </div>
     </header>
 
@@ -221,7 +252,7 @@
     </section>
 
     <div id="footer"></div>
-
+    <script src="/premium_site_starter/assets/mobile-menu.js"></script>
     <script src="/premium_site_starter/assets/script.js"></script>
     <script src="/premium_site_starter/assets/layout.js"></script>
 
