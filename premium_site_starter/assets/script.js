@@ -1,5 +1,16 @@
-// Year in footer
-document.getElementById('yr').textContent = new Date().getFullYear();
+// Wait until the footer is present
+function setYearWhenFooterExists() {
+  const yrEl = document.querySelector("#footer #yr") || document.getElementById("yr");
+  if (yrEl) {
+    yrEl.textContent = new Date().getFullYear();
+  } else {
+    // Retry in 100ms until it exists
+    setTimeout(setYearWhenFooterExists, 100);
+  }
+}
+
+// Start checking
+setYearWhenFooterExists();
 
 // Simple intersection observer for reveals
 const io = new IntersectionObserver((entries) => {
