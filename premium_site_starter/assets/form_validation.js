@@ -38,7 +38,7 @@ form.addEventListener('submit', async function (event) {
     const errorMsg = document.getElementById('form-error');
 
     try {
-        const response = await fetch("https://formspree.io/f/mykkeodw", {
+        const response = await fetch("https://formspree.io/f/xqeepvkp", {
             method: "POST",
             body: formData,
             headers: {
@@ -54,6 +54,7 @@ form.addEventListener('submit', async function (event) {
             successModal.classList.add('flex');
             form.reset();
         } else {
+            console.error('Form submission error:', response.statusText);
             errorMsg.classList.remove('hidden');
         }
 
