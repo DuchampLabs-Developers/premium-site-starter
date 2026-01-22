@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us - DuchampLABS</title>
+    <meta name="description" content="Clean, premium starter template for a formulation services brand." />
+    <!-- Tailwind Play CDN (fine for prototypes; switch to build pipeline later) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f9ff',
+                            100: '#eaf2ff',
+                            600: '#2457ff',
+                            700: '#1a46d9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="/premium_site_starter/assets/style.css">
+</head>
+
+<body class="font-sans text-slate-800 bg-white selection:bg-brand-100 selection:text-slate-900">
+    <!-- Header -->
+    <header id="header" class="sticky top-0 z-30 bg-white/70 border-b border-slate-100">
+        <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2">
+                <span
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-brand-600 text-white font-semibold">DC</span>
+                <span class="text-lg font-semibold tracking-tight">DuchampLABS</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-6 text-sm">
+                <a href="/#services" class="hover:text-brand-700 transition">Services</a>
+                <a href="/#process" class="hover:text-brand-700 transition">Process</a>
+                <a href="/#work" class="hover:text-brand-700 transition">Work</a>
+                <a href="/about" class="hover:text-brand-700 transition">About</a>
+                <a href="/contact"
+                    class="ml-2 inline-flex items-center rounded-md bg-brand-600 px-4 py-2 text-white font-medium hover:bg-brand-700 transition">Get
+                    a Quote</a>
+            </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="hamburger"
+                class="md:hidden flex items-center justify-center w-10 h-10 rounded-md text-brand-600 hover:bg-gray-200 transition">
+                <svg id="hamburger-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="hamburger-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Modal (below header, header unaffected) -->
+        <div id="mobileMenuBackdrop" class="fixed inset-0 z-40 hidden pt-[72px]">
+            <!-- pt-[72px] pushes menu below header height -->
+            <div id="mobileMenu"
+                class="flex flex-col items-center justify-start space-y-6 bg-brand-100 text-xl transform scale-95 opacity-0 transition-all duration-300 py-6">
+                <a href="/#services" class="hover:text-brand-700 transition">Services</a>
+                <a href="/#process" class="hover:text-brand-700 transition">Process</a>
+                <a href="/#work" class="hover:text-brand-700 transition">Work</a>
+                <a href="/about" class="hover:text-brand-700 transition">About</a>
+                <a href="/contact"
+                    class="inline-flex items-center rounded-md bg-brand-600 px-6 py-3 text-white font-medium hover:bg-brand-700 transition">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="relative  py-10 px-6 md:py-12 overflow-hidden bg-brand-100">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-160px)]">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-foreground mb-2">
+                        About Us
+                    </h1>
+
+                    <br class="text-xl text-justify text-muted-foreground leading-relaxed mb-8 max-w-lg ">
+                    We are a <span class="font-semibold">Food Science-led product development consultancy</span>
+                    supporting CPG food and beverage brands from concept through commercialization. Our work integrates
+                    formulation development, technical strategy, and scale readiness to deliver products that are
+                    market-ready, manufacturable, and built for growth.<br><br>
+
+                    We provide <span class="font-semibold">end-to-end support across</span> formulation optimization,
+                    ingredient sourcing, regulatory
+                    alignment, and manufacturing readiness—ensuring products perform consistently within real-world
+                    production and supply chain environments.<br><br>
+
+                    We partner as a strategic extension of our clients’ teams, offering clear technical leadership and
+                    disciplined execution to <span class="font-semibold">reduce development risk</span>, <span
+                        class="font-semibold">accelerate timelines</span>, and support <span
+                        class="font-semibold">successful product launches</span> in competitive CPG markets.
+
+                    </p>
+                </div>
+
+                <div class="relative max-w-full mx-auto px-4 md:px-0 reveal">
+                    <!-- Large screens: lg+ -->
+                    <div class="hidden lg:block relative max-w-lg mx-auto">
+                        <!-- Image 1 -->
+                        <div
+                            class="absolute -bottom-4 -left-4 w-80 h-64 rounded-2xl overflow-hidden shadow-lg border-4 border-background z-20">
+                            <img src="/premium_site_starter/assets/images/aboutus_1.png" alt="About Us Image"
+                                class="w-full h-full object-cover">
+
+                            <!-- Badge lower-right corner -->
+                            <div
+                                class="absolute bottom-3 right-3 bg-white/90 rounded-xl px-3 py-2 text-center shadow-md">
+                                <p class="text-lg font-bold text-primary">10+</p>
+                                <p class="text-xs text-muted-foreground mt-0.5">Formulas Launched</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 2 -->
+                        <div
+                            class="absolute -top-4 -right-4 w-80 h-64 rounded-2xl overflow-hidden shadow-lg border-4 border-background z-20">
+                            <img src="/premium_site_starter/assets/images/aboutus_2.png" alt="About Us Image"
+                                class="w-full h-full object-cover object-right">
+
+                            <!-- Badges upper-left corner -->
+                            <div class="absolute top-3 left-3 flex flex-col gap-2">
+                                <!-- <div class="bg-white/90 rounded-xl px-3 py-2 text-center shadow-md">
+                                    <p class="text-lg font-bold text-primary">5+</p>
+                                    <p class="text-xs text-muted-foreground mt-0.5">Brand Partners</p>
+                                </div> -->
+                                <div class="bg-white/90 rounded-xl px-3 py-2 text-center shadow-md">
+                                    <p class="text-lg font-bold text-primary">8yr</p>
+                                    <p class="text-xs text-muted-foreground mt-0.5">Industry Experience</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Medium + small screens: md and below -->
+                    <div class="mb-3 lg:hidden">
+                        <!-- Image 1 -->
+                        <div class="w-full h-64 rounded-2xl overflow-hidden shadow-lg border-4 border-background mb-4">
+                            <img src="/premium_site_starter/assets/images/aboutus_1.png" alt="About Us Image"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Image 2 -->
+                        <div class="w-full h-64 rounded-2xl overflow-hidden shadow-lg border-4 border-background mb-4">
+                            <img src="/premium_site_starter/assets/images/aboutus_2.png" alt="About Us Image"
+                                class="w-full h-full object-cover object-right">
+                        </div>
+
+                        <!-- Badges below images -->
+                        <div class="grid grid-cols-3 gap-4 text-center mt-4">
+                            <div class="bg-white/90 rounded-xl px-3 py-2 shadow-md">
+                                <p class="text-lg font-bold text-primary">10+</p>
+                                <p class="text-xs text-muted-foreground mt-0.5">Formulas Launched</p>
+                            </div>
+                            <div class="bg-white/90 rounded-xl px-3 py-2 shadow-md">
+                                <p class="text-lg font-bold text-primary">5+</p>
+                                <p class="text-xs text-muted-foreground mt-0.5">Brand Partners</p>
+                            </div>
+                            <div class="bg-white/90 rounded-xl px-3 py-2 shadow-md">
+                                <p class="text-lg font-bold text-primary">8yr</p>
+                                <p class="text-xs text-muted-foreground mt-0.5">Industry Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Areas Section -->
+    <section class="relative overflow-hidden section-padding bg-brand-50 py-10 px-6 md:py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Our Focus Areas</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+                <div
+                    class="group relative bg-card rounded-3xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-500">
+                    <div class="relative aspect-[4/3]">
+                        <img src="/premium_site_starter/assets/images/rtd.jpg" alt="Beverage & RTD"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-75">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent"></div>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6">
+                        <div class="w-14 h-14 mb-4">
+                        </div>
+                        <h3 class=" font-semibold text-white mb-2 text-xl">Beverage & RTD</h3>
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-card rounded-3xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-500">
+                    <div class="relative aspect-[4/3]">
+                        <img src="/premium_site_starter/assets/images/aperitif.jpeg" alt="Spirits & Aperitifs"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-75">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent"></div>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6">
+                        <div class="w-14 h-14 mb-4">
+                        </div>
+                        <h3 class=" font-semibold text-white mb-2 text-xl">Spirits & Aperitifs</h3>
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-card rounded-3xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-500">
+                    <div class="relative aspect-[4/3]">
+                        <img src="/premium_site_starter/assets/images/herbal.jpeg" alt="Functional Ingredients"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-75">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent"></div>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6">
+                        <div class="w-14 h-14 mb-4">
+                        </div>
+                        <h3 class=" font-semibold text-white mb-2 text-xl">Functional Ingredients</h3>
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-card rounded-3xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-500">
+                    <div class="relative aspect-[4/3]">
+                        <img src="/premium_site_starter/assets/images/product_launch.jpeg" alt=" CPG Launch Support"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-75">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent"></div>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6">
+                        <div class="w-14 h-14 mb-4">
+                        </div>
+                        <h3 class=" font-semibold text-white mb-2 text-xl"> CPG Launch Support</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <script src="/premium_site_starter/assets/mobile-menu.js"></script>
+    <script src="/premium_site_starter/assets/script.js"></script>
+    <script src="/premium_site_starter/assets/layout.js"></script>
+
+
+</body>
+
+</html>
